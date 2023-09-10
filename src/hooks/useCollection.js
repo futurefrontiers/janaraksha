@@ -13,6 +13,8 @@ export const useCollection = (collectionName) => {
         setLoading(false)
     }
 
+    // Function return the firebase collection
+    // reference for provided collectionName.
     function getCollectionRef() {
         if(!collectionName) {
             return null
@@ -52,12 +54,12 @@ export const useCollection = (collectionName) => {
 
         try {
             unsub = onSnapshot(q, (querySnapshot) => {
-                console.log('querySnapshot: ', querySnapshot.docs)
+                const formattedDocs = querySnapshot.docs.map(doc => ({
+                    id: doc.id,
+                    data: doc.data()
+                }))
                 setLoading(false)
-                setDocs(querySnapshot.docs.map(doc => ({
-                  id: doc.id,
-                  data: doc.data()
-                })))
+                setDocs(formattedDocs)
             })
         }catch(e) {
             setErr(e)

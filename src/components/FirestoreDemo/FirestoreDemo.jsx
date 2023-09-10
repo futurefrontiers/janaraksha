@@ -1,15 +1,39 @@
-import { useEffect } from 'react'
+import { useRef, Fragment } from 'react'
 import { useCollection } from '../../hooks'
 
 export const FirestoreDemo = () => {
-  const { docs, err, loading } = useCollection('test')
+  const { docs, err, loading, create } = useCollection('test')
+  const bloodGroups = ['A', 'B', 'O', 'AB']
+  const formRef = useRef()
 
-  useEffect(() => {
-    console.log('[firestoreDemo] docs: ', docs)
-  }, [docs])
+  const handleSubmit = async (e) => {
+    // prevent the default submit behaviour of form.
+    e.preventDefault();
+
+    // Extract all the form fields inside form.
+    const inputFields = formRef.current.querySelectorAll('input')
+    const selectFields = formRef.current.querySelectorAll('select')
+    const fields = [...inputFields, ...selectFields]
+
+    // Iterate over the form fields and build formValue obj.
+    const formValue = {}
+    fields.forEach(field => {
+      console.log('name: ', field.name, ', value: ', field.value)
+      formValue[field.name] = field.value
+    })
+
+    try {
+      await create(formValue)
+      fields.forEach(field => field.value = '')
+    }catch(e) {
+      console.log(e)
+    }
+
+  }
 
   return (
-    <div>
+    <div className='firestoredemo'>
+      <h1 className='title'>Firestore Demo - Donors</h1>
 
       {/* Error */}
       {err && <p>{err}</p>}
@@ -17,15 +41,45 @@ export const FirestoreDemo = () => {
       {/* Loader */}
       {loading && <p>Loading docs...</p>}
 
-      {/* Data */}
-      {docs.map(doc => (
-        <div key={doc.id}>
-          <h1>{doc.id}</h1>
-          <div>
-            {JSON.stringify(doc.data)}
-          </div>
+
+      {/* Add Doc */}
+      <form className='user__form' onSubmit={handleSubmit} ref={formRef}>
+        <div>
+          <label>Name</label>
+          <input type="text" name='name' placeholder='Enter Name'/>
         </div>
-      ))}
+        <div>
+          <label>Blood Group</label>
+          <select name="blood_group" id="blood_group">
+            {bloodGroups.map(bg => {
+              return (
+                <Fragment key={`${bg}`}>
+                  <option key={bg + '+'} value={`${bg}+`}>{bg}+</option>
+                  <option key={bg + '-'} value={`${bg}-`}>{bg}-</option>
+                </Fragment>
+              )
+            })}
+          </select>
+        </div>
+        <div>
+          <label>Location</label>
+          <input type="text" name='location' placeholder='Enter Location'/>
+        </div>
+        <div>
+          <button type="submit">Add User</button>
+        </div>
+      </form>
+
+      {/* Data */}
+      <div className='user__list'>
+        {docs.map(({id, data:user}) => (
+          <div key={id} className='user__card'>
+            <h2>{user?.name}</h2>
+            <p>Blood Group: {user?.blood_group}</p>
+            <p>Location: {user?.location}</p>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
