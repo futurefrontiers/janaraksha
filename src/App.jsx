@@ -1,9 +1,13 @@
-import './App.css'
+import React from "react"
 
 function App() {
   return (
     <>
-      <h1>Janaraksha!</h1>
+      <div className="app">
+        <h1 className="text-3xl font-bold underline">
+          Janaraksha!
+        </h1>
+      </div>
     </>
   )
 }
