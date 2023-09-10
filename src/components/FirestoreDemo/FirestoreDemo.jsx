@@ -6,6 +6,28 @@ export const FirestoreDemo = () => {
   const bloodGroups = ['A', 'B', 'O', 'AB']
   const formRef = useRef()
 
+  const isValidUserObj = (user) => {
+    const name = user.name
+    if(!name.value) {
+      name.ref && name.ref.focus()
+      return false
+    }
+
+    const location = user.location
+    if(!location.value) {
+      location.ref && location.ref.focus()
+      return false
+    }
+
+    const bg = user.blood_group
+    if(!bg) {
+      bg.ref && bg.ref.focus()
+      return false
+    }
+
+    return true
+  }
+
   const handleSubmit = async (e) => {
     // prevent the default submit behaviour of form.
     e.preventDefault();
@@ -18,17 +40,31 @@ export const FirestoreDemo = () => {
     // Iterate over the form fields and build formValue obj.
     const formValue = {}
     fields.forEach(field => {
-      console.log('name: ', field.name, ', value: ', field.value)
-      formValue[field.name] = field.value
+      formValue[field.name] = {
+        value: field.value,
+        ref: field
+      }
     })
 
+    if(!isValidUserObj(formValue)) {
+      return
+    }
+
     try {
-      await create(formValue)
+      // Build doc obj.
+      const value = Object.keys(formValue).reduce((acc, key) => {
+        acc[key] = formValue[key].value
+        return acc
+      }, {})
+
+      // store doc in firebase.
+      await create(value)
+
+      // reset form fields.
       fields.forEach(field => field.value = '')
     }catch(e) {
       console.log(e)
     }
-
   }
 
   return (
