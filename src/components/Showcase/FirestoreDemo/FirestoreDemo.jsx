@@ -1,5 +1,6 @@
 import { useRef, Fragment } from 'react'
 import { useCollection } from '../../../hooks'
+import { User } from './User';
 
 export const FirestoreDemo = () => {
   const { docs, err, loading, create } = useCollection('test')
@@ -67,10 +68,6 @@ export const FirestoreDemo = () => {
     }
   }
 
-  const handleDelete = async (docId) => {
-    console.log('delete: ', docId)
-  }
-
   return (
     <div className='firestoredemo'>
       <h1 className='title'>Firestore Demo - Donors</h1>
@@ -111,15 +108,8 @@ export const FirestoreDemo = () => {
 
       {/* Data */}
       <div className='user__list'>
-        {docs.map(({id, data:user}) => (
-          <div key={id} className='user__card'>
-            <h2>{user?.name}</h2>
-            <p>Blood Group: {user?.blood_group}</p>
-            <p>Location: {user?.location}</p>
-            <div>
-              <button onClick={() => handleDelete(id)}>Delete</button>
-            </div>
-          </div>
+        {docs.map(({id, data}) => (
+          <User key={id} id={id} user={data} />
         ))}
       </div>
     </div>
