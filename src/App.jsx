@@ -1,15 +1,14 @@
-import React from "react"
+import React from 'react';
 
+import Home from './UI/Pages/Home';
+
+import './styles/ui_style.scss';
 function App() {
-  return (
-    <>
-      <div className="app">
-        <h1 className="text-3xl font-bold underline">
-          Janaraksha!
-        </h1>
-      </div>
-    </>
-  )
+    return (
+        <>
+            <Home />
+        </>
+    );
 }
 
-export default App
+export default App;
