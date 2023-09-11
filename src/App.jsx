@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Home from './UI/Pages/Home';
+import Home from './Pages/Home';
 
 import './styles/ui_style.scss';
 function App() {

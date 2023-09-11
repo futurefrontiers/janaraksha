@@ -1,10 +1,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, FreeMode, Virtual, Autoplay } from 'swiper/modules';
 
-import testimonials_01 from '../../../img/testimonials/testimonials-1.jpg';
-import testimonials_02 from '../../../img/testimonials/testimonials-2.jpg';
-import testimonials_03 from '../../../img/testimonials/testimonials-3.jpg';
-import testimonials_04 from '../../../img/testimonials/testimonials-4.jpg';
+import testimonials_01 from '../../assets/img/testimonials/testimonials-1.jpg';
+import testimonials_02 from '../../assets/img/testimonials/testimonials-2.jpg';
+import testimonials_03 from '../../assets/img/testimonials/testimonials-3.jpg';
+import testimonials_04 from '../../assets/img/testimonials/testimonials-4.jpg';
 
 const Testimonials = function () {
     return (
