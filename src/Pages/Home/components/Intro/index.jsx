@@ -1,6 +1,6 @@
 import React from 'react';
 
-import intro_img from '../../../../assets/img/intro_logo.png';
+import intro_img from '../../../../assets/images/intro_logo.png';
 
 const Intro = () => {
     return (

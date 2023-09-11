@@ -2,7 +2,7 @@ import React from 'react';
 
 import Home from './Pages/Home';
 
-import './styles/ui_style.scss';
+import './assets/styles/ui_style.scss';
 function App() {
     return (
         <>

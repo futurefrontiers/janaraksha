@@ -1,6 +1,6 @@
 import React from 'react';
 
-import QR_COde from '../../assets/img/QR-code1.jpg';
+import QR_COde from '../../assets/images/QR-code1.jpg';
 
 const Footer = () => {
     return (
