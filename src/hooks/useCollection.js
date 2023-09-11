@@ -56,7 +56,8 @@ export const useCollection = (collectionName) => {
             unsub = onSnapshot(q, (querySnapshot) => {
                 const formattedDocs = querySnapshot.docs.map(doc => ({
                     id: doc.id,
-                    data: doc.data()
+                    data: doc.data(),
+                    ref: doc.ref
                 }))
                 setLoading(false)
                 setDocs(formattedDocs)
