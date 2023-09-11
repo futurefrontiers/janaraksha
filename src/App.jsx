@@ -1,15 +1,15 @@
-import React from "react";
-import Dashboard from "./pages/Dashboard/Dashboard";
+import React from 'react';
+import Home from './pages/Home';
+import AboutUs from './pages/About';
 
-import Home from "./pages/Home";
+import './assets/styles/ui_style.scss';
 
 function App() {
-  return (
-    <>
-      {/* <Home /> */}
-      <Dashboard />
-    </>
-  );
+    return (
+        <>
+            <AboutUs />
+        </>
+    );
 }
 
 export default App;
