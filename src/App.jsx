@@ -1,18 +1,13 @@
-import React from "react"
-import { FirestoreDemo } from "./components"
+import React from 'react';
+import Home from './pages/Home';
 
+import './assets/styles/ui_style.scss';
 function App() {
-  return (
-    <>
-      <div className="app">
-        <h1 className="text-3xl font-bold underline">
-          Janaraksha!
-        </h1>
-
-        <FirestoreDemo/>
-      </div>
-    </>
-  )
+    return (
+        <>
+            <Home />
+        </>
+    );
 }
 
-export default App
+export default App;
