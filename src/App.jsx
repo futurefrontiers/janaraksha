@@ -1,15 +1,12 @@
-import React from "react"
+import React from "react";
+import Dashboard from "./pages/dashboard/Dashboard";
 
 function App() {
   return (
     <>
-      <div className="app">
-        <h1 className="text-3xl font-bold underline">
-          Janaraksha!
-        </h1>
-      </div>
+      <Dashboard />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
