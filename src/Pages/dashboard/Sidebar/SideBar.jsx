@@ -18,7 +18,7 @@ const SideBar = () => {
     setSelected(e);
   };
   return (
-    <div className="sidebar">
+    <div id="sidebar">
       <div className="menu-options">
         {options.map((item, i) => (
           <button

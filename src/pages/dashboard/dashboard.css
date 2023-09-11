@@ -1,4 +1,7 @@
-.container {
+.dashboard {
+}
+
+.dashboard_container {
   display: flex;
   height: 92vh;
   max-height: 92vh;

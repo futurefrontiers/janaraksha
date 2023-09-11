@@ -1,18 +1,18 @@
 import React from "react";
-import SideBar from "./SideBar";
-import Navbar from "./Navbar";
-import Main from "./Main";
+import SideBar from "./Sidebar/SideBar";
+import Navbar from "./Navbar/Navbar";
+import Main from "./Main/Main";
 import "./dashboard.css";
 
 const Dashboard = () => {
   return (
-    <>
+    <div className="dashboard">
       <Navbar />
-      <div className="container">
+      <div className="dashboard_container">
         <SideBar />
         <Main />
       </div>
-    </>
+    </div>
   );
 };
 

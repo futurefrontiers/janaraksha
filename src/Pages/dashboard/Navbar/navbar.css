@@ -1,4 +1,4 @@
-.navbar {
+#nav {
   height: 58px;
   background-color: #fff;
   max-width: 100%;
@@ -7,24 +7,28 @@
   justify-content: space-between;
   padding: 10px 22px;
 }
-#logo {
+#nav #logo {
   display: flex;
   gap: 8px;
   align-items: center;
 }
 
-#logo img {
+#nav #logo img {
   width: 40px;
   height: auto;
 }
 
-#logo h3 {
+#nav #logo h3 {
   color: orangered;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: -0.8px;
 }
 
-.profile {
+#nav .profile {
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 50%;
+  border: 1px solid #111;
   cursor: pointer;
 }
