@@ -1,45 +1,54 @@
 import React from 'react';
 
+import { NavLink, Link } from 'react-router-dom';
+
 const Navbar = () => {
     return (
         <nav id='navbar' className='navbar'>
             <ul>
                 <li>
-                    <a href='index.html' className='active'>
+                    <NavLink to='/' className={({ isActive }) => (isActive ? 'active' : '')}>
                         Home
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href='about.html'>About</a>
+                    <NavLink to='/about' className={({ isActive }) => (isActive ? 'active' : '')}>
+                        About
+                    </NavLink>
                 </li>
                 <li>
-                    <a href='services.html'>Services</a>
+                    <NavLink to='/services' className={({ isActive }) => (isActive ? 'active' : '')}>
+                        Services
+                    </NavLink>
                 </li>
                 <li>
-                    <a href='projects.html'>Projects</a>
+                    <NavLink to='/projects' className={({ isActive }) => (isActive ? 'active' : '')}>
+                        Projects
+                    </NavLink>
                 </li>
                 <li className='dropdown'>
-                    <a href='#'>
+                    <Link to='/donations'>
                         <span>Donations</span> <i className='bi bi-chevron-down dropdown-indicator' />
-                    </a>
+                    </Link>
                     <ul>
                         <li>
-                            <a href='#'>Organ Donation</a>
-                        </li>
-                        <ul></ul>
-                        <li>
-                            <a href='#'>Blood Donation</a>
+                            <Link to='/donations/organ'>Organ Donation</Link>
                         </li>
                         <li>
-                            <a href='#'>Food Donation</a>
+                            <Link to='/donations/blood'>Blood Donation</Link>
                         </li>
                         <li>
-                            <a href='#'>Financial assistance</a>
+                            <Link to='/donations/food'>Food Donation</Link>
+                        </li>
+                        <li>
+                            <Link to='/donations/financial'>Financial Assistance</Link>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href='contact.html'>Contact</a>
+                    <NavLink to='/contact' className={({ isActive }) => (isActive ? 'active' : '')}>
+                        Contact
+                    </NavLink>
                 </li>
             </ul>
         </nav>

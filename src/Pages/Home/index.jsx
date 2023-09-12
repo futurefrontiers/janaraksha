@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from './components/Header';
 import Carousel from './components/Carousel';
 import Intro from './components/Intro';
 import WhatWeDo from './components/WhatWeDo';
+import Header from '../../components/Header';
 import Testimonials from '../../components/Testimonials';
 import Footer from '../../components/Footer';
 

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import hero_carousel_1 from '../../../../assets/images/hero-carousel/hero-carousel-1.jpg';
 import hero_carousel_2 from '../../../../assets/images/hero-carousel/hero-carousel-2.jpg';
 import hero_carousel_3 from '../../../../assets/images/hero-carousel/hero-carousel-3.jpg';
@@ -13,12 +15,12 @@ const Carousel = () => {
                 <div className='container'>
                     <div className='row justify-content-center'>
                         <div className='col-lg-6 text-center'>
-                            <a data-aos='fade-up' data-aos-delay={200} href='#get-started' className='btn-get-started'>
+                            <Link data-aos='fade-up' data-aos-delay='200' className='btn-get-started' to='/about'>
                                 Become Volunteer
-                            </a>
-                            <a data-aos='fade-up' data-aos-delay={200} href='#get-started' className='btn-get-started'>
+                            </Link>
+                            <Link data-aos='fade-up' data-aos-delay='200' className='btn-get-started' to='/donations/financial'>
                                 Support Our Work
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

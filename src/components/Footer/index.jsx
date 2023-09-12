@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import QR_COde from '../../assets/images/QR-code1.jpg';
 
 const Footer = () => {
@@ -51,13 +53,15 @@ const Footer = () => {
                             <h4>Useful Links</h4>
                             <ul>
                                 <li>
-                                    <a href='#'>Home</a>
+                                    <Link to='/' href='#'>
+                                        Home
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='#'>About us</a>
+                                    <Link to='/about'>About us</Link>
                                 </li>
                                 <li>
-                                    <a href='#'>Services</a>
+                                    <Link to='/services'>Services</Link>
                                 </li>
                                 <li>
                                     <a href='#'>Terms of service</a>
@@ -72,13 +76,13 @@ const Footer = () => {
                             <h4>Our Services</h4>
                             <ul>
                                 <li>
-                                    <a href='#'>Organ Donation</a>
+                                    <Link to='/donations/organ'>Organ Donation</Link>
                                 </li>
                                 <li>
-                                    <a href='#'>Blood Donation</a>
+                                    <Link to='/donations/blood'>Blood Donation</Link>
                                 </li>
                                 <li>
-                                    <a href='#'>Emergency support</a>
+                                    <Link to='/donations/food'>Food Donation</Link>
                                 </li>
                             </ul>
                         </div>

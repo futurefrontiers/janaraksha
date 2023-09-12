@@ -1,17 +1,16 @@
 import React from 'react';
-import Navbar from '../../../../components/Navbar';
+import { Link } from 'react-router-dom';
+import Navbar from '../Navbar';
 
 const Header = () => {
     return (
         <header id='header' className='header d-flex align-items-center'>
             <div className='container-fluid container-xl d-flex align-items-center justify-content-between'>
-                <a href='index.html' className='logo d-flex align-items-center'>
-                    {/* Uncomment the line below if you also wish to use an image logo */}
-                    {/* <img src="assets/img/logo.png" alt=""> */}
+                <Link to='/' className='logo d-flex align-items-center'>
                     <h1>
                         JANA RAKSHA<span> NGO</span>
                     </h1>
-                </a>
+                </Link>
                 <i className='mobile-nav-toggle mobile-nav-show bi bi-list' />
                 <i className='mobile-nav-toggle mobile-nav-hide d-none bi bi-x' />
                 <Navbar />

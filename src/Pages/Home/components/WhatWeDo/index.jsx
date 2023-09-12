@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 const WhatWeDo = () => {
     return (
         <section id='services' className='services section-bg'>
@@ -16,9 +18,9 @@ const WhatWeDo = () => {
                             </div>
                             <h3>Blood Donation</h3>
                             <p>In your blood, hope and strength pave the way. With every drop you share, a hero you become, Saving lives, shining bright like the morning sun..</p>
-                            <a href='service-details.html' className='readmore stretched-link'>
+                            <Link to='/donations/blood' className='readmore stretched-link'>
                                 Donate <i className='bi bi-arrow-right' />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/* End Service Item */}
@@ -29,9 +31,9 @@ const WhatWeDo = () => {
                             </div>
                             <h3>Organ Donation</h3>
                             <p>Organ donation, a chance to rescue. When you're gone, your legacy will live on, A selfless act of love, when you're gone..</p>
-                            <a href='service-details.html' className='readmore stretched-link'>
+                            <Link to='/donations/organ' className='readmore stretched-link'>
                                 Donate <i className='bi bi-arrow-right' />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/* End Service Item */}
@@ -42,9 +44,9 @@ const WhatWeDo = () => {
                             </div>
                             <h3>Food Donation</h3>
                             <p>Food donation, where compassion is found. Nourishing those in need, making hearts light, A simple act of giving, brings hope to the night..</p>
-                            <a href='service-details.html' className='readmore stretched-link'>
+                            <Link to='/donations/food' className='readmore stretched-link'>
                                 Donate <i className='bi bi-arrow-right' />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/* End Service Item */}
@@ -55,9 +57,9 @@ const WhatWeDo = () => {
                             </div>
                             <h3>Plantation</h3>
                             <p>Planting trees with care, nature's gift we sow, Greening the Earth, watch our future grow. Cleaner air, shade, and homes for all, Plantation's the answer, to nature's call..</p>
-                            <a href='service-details.html' className='readmore stretched-link'>
+                            <Link to='/donations/financial' className='readmore stretched-link'>
                                 Donate <i className='bi bi-arrow-right' />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/* End Service Item */}
@@ -68,9 +70,9 @@ const WhatWeDo = () => {
                             </div>
                             <h3>Books And Education</h3>
                             <p>In the pages of books, knowledge takes flight, Education's beacon, shining so bright. Empowering minds, opening doors anew, Books and education, the world they renew..</p>
-                            <a href='service-details.html' className='readmore stretched-link'>
+                            <Link to='/donations/financial' className='readmore stretched-link'>
                                 Donate <i className='bi bi-arrow-right' />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/* End Service Item */}
@@ -81,9 +83,9 @@ const WhatWeDo = () => {
                             </div>
                             <h3>Job Mela</h3>
                             <p>Jobs provide purpose, a means to sustain, Empower individuals, alleviate financial strain. Economic growth, a nation's heartbeat and gain, Employment opportunities, a thriving domain..</p>
-                            <a href='service-details.html' className='readmore stretched-link'>
-                                Join With Us <i className='bi bi-arrow-right' />
-                            </a>
+                            <Link to='/donations/financial' className='readmore stretched-link'>
+                                Donate <i className='bi bi-arrow-right' />
+                            </Link>
                         </div>
                     </div>
                     {/* End Service Item */}

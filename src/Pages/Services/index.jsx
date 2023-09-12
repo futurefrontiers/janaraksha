@@ -1,12 +1,10 @@
 import React from 'react';
 import Header from '../../components/Header';
 import Breadcrumbs from '../../components/Breadcrumbs';
-import Intro from './components/Intro';
-import Counter from './components/Counter';
 import Testimonials from '../../components/Testimonials';
 import Footer from '../../components/Footer';
 
-const AboutUs = () => {
+const Services = () => {
     return (
         <>
             {/*  ======= Header Section ======= */}
@@ -14,9 +12,7 @@ const AboutUs = () => {
 
             {/*  ======= Main Section =======  */}
             <main id='main'>
-                <Breadcrumbs Title='About' />
-                <Intro />
-                <Counter />
+                <Breadcrumbs Title='Services' />
                 <Testimonials />
             </main>
 
@@ -32,4 +28,4 @@ const AboutUs = () => {
     );
 };
 
-export default AboutUs;
+export default Services;

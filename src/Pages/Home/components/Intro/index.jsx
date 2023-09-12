@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import intro_img from '../../../../assets/images/intro_logo.png';
 
 const Intro = () => {
@@ -15,9 +17,9 @@ const Intro = () => {
                                 serve is not to have money, but a good heart," Mother Theresa emphasized the importance of having a kind heart to help others. With a mission to provide education, healthcare, and
                                 employment opportunities, the organization began with a noble goal and a vision for a better future.
                             </p>
-                            <a data-aos='fade-up' data-aos-delay='200' href='#get-started' className='btn-get-started'>
+                            <Link data-aos='fade-up' data-aos-delay='200' className='btn-get-started' to='/about'>
                                 About Us
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
