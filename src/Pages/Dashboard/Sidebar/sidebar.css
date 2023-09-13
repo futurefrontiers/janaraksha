@@ -1,0 +1,29 @@
+#sidebar {
+  background-color: #fff;
+  width: 10vw;
+  font-family: sans-serif;
+  height: 92vh;
+}
+
+.menu-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-option {
+  width: 100%;
+  background-color: #fff;
+  padding: 16px 16px;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-option:hover {
+  color: orangered;
+}
+
+.menu-option.active {
+  background-color: orangered;
+  color: #fff;
+}
