@@ -27,11 +27,11 @@ export const PORTFOLIO_DATA = [
         imageSrc: od_1,
         project_info: {
             category: 'Organ Donation',
-            colaretion: 'Rotary Blood bank',
+            collaboration: 'Rotary Blood bank',
             date: '01 Sep, 2023',
             location: 'Velangi',
         },
-        Organizers: TESTIMONIAL_INFO,
+        organizers: TESTIMONIAL_INFO,
     },
     {
         id: 2,
@@ -43,11 +43,11 @@ export const PORTFOLIO_DATA = [
         imageSrc: bd_1,
         project_info: {
             category: 'Blood Donation',
-            colaretion: 'Rotary Blood bank',
+            collaboration: 'Rotary Blood bank',
             date: '01 Sep, 2023',
             location: 'Velangi',
         },
-        Organizers: TESTIMONIAL_INFO,
+        organizers: TESTIMONIAL_INFO,
     },
     {
         id: 3,
@@ -59,11 +59,11 @@ export const PORTFOLIO_DATA = [
         imageSrc: fd_1,
         project_info: {
             category: 'Food Donation',
-            colaretion: '',
+            collaboration: '',
             date: '',
             location: '',
         },
-        Organizers: TESTIMONIAL_INFO,
+        organizers: TESTIMONIAL_INFO,
     },
     {
         id: 4,
@@ -75,11 +75,11 @@ export const PORTFOLIO_DATA = [
         imageSrc: jm_1,
         project_info: {
             category: 'Job Mela',
-            colaretion: '',
+            collaboration: '',
             date: '',
             location: '',
         },
-        Organizers: TESTIMONIAL_INFO,
+        organizers: TESTIMONIAL_INFO,
     },
     {
         id: 5,
@@ -91,11 +91,11 @@ export const PORTFOLIO_DATA = [
         imageSrc: od_2,
         project_info: {
             category: 'Organ Donation',
-            colaretion: '',
+            collaboration: '',
             date: '',
             location: '',
         },
-        Organizers: TESTIMONIAL_INFO,
+        organizers: TESTIMONIAL_INFO,
     },
     {
         id: 6,
@@ -107,11 +107,11 @@ export const PORTFOLIO_DATA = [
         imageSrc: bd_2,
         project_info: {
             category: 'Blood Donation',
-            colaretion: '',
+            collaboration: '',
             date: '',
             location: '',
         },
-        Organizers: TESTIMONIAL_INFO,
+        organizers: TESTIMONIAL_INFO,
     },
     {
         id: 7,
@@ -123,11 +123,11 @@ export const PORTFOLIO_DATA = [
         imageSrc: fd_2,
         project_info: {
             category: 'Food Donation',
-            colaretion: '',
+            collaboration: '',
             date: '',
             location: '',
         },
-        Organizers: TESTIMONIAL_INFO,
+        organizers: TESTIMONIAL_INFO,
     },
     {
         id: 8,
@@ -139,11 +139,11 @@ export const PORTFOLIO_DATA = [
         imageSrc: jm_2,
         project_info: {
             category: 'Job Mela',
-            colaretion: '',
+            collaboration: '',
             date: '',
             location: '',
         },
-        Organizers: TESTIMONIAL_INFO,
+        organizers: TESTIMONIAL_INFO,
     },
     {
         id: 9,
@@ -155,11 +155,11 @@ export const PORTFOLIO_DATA = [
         imageSrc: od_3,
         project_info: {
             category: 'Organ Donation',
-            colaretion: '',
+            collaboration: '',
             date: '',
             location: '',
         },
-        Organizers: TESTIMONIAL_INFO,
+        organizers: TESTIMONIAL_INFO,
     },
     {
         id: 10,
@@ -171,11 +171,11 @@ export const PORTFOLIO_DATA = [
         imageSrc: bd_3,
         project_info: {
             category: 'Blood Donation',
-            colaretion: '',
+            collaboration: '',
             date: '',
             location: '',
         },
-        Organizers: TESTIMONIAL_INFO,
+        organizers: TESTIMONIAL_INFO,
     },
     {
         id: 11,
@@ -187,11 +187,11 @@ export const PORTFOLIO_DATA = [
         imageSrc: fd_3,
         project_info: {
             category: 'Food Donation',
-            colaretion: '',
+            collaboration: '',
             date: '',
             location: '',
         },
-        Organizers: TESTIMONIAL_INFO,
+        organizers: TESTIMONIAL_INFO,
     },
     {
         id: 12,
@@ -203,10 +203,10 @@ export const PORTFOLIO_DATA = [
         imageSrc: jm_3,
         project_info: {
             category: 'Job Mela',
-            colaretion: '',
+            collaboration: '',
             date: '',
             location: '',
         },
-        Organizers: TESTIMONIAL_INFO,
+        organizers: TESTIMONIAL_INFO,
     },
 ];

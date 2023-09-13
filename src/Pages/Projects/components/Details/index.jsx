@@ -11,7 +11,7 @@ import { PORTFOLIO_DATA } from '../../../../constants/portfolioConstants';
 const Details = () => {
     const { id } = useParams();
     const project = PORTFOLIO_DATA.find(p => p.id === +id);
-    const { category, colaretion, date, location } = project?.project_info;
+    const { category, collaboration, date, location } = project?.project_info;
 
     return (
         <>
@@ -29,7 +29,7 @@ const Details = () => {
                             <div className='col-lg-8' data-aos='fade-up'>
                                 <div className='portfolio-description'>
                                     <h2>We are planning to work together</h2>
-                                    <h3>{`Janaraksha ${!!colaretion ? `- ${colaretion}` : ''}`}</h3>
+                                    <h3>{`Janaraksha ${!!collaboration ? `- ${collaboration}` : ''}`}</h3>
                                     <p>{project.description}</p>
                                 </div>
                             </div>
@@ -43,9 +43,9 @@ const Details = () => {
                                             </li>
                                         ) : null}
 
-                                        {!!colaretion ? (
+                                        {!!collaboration ? (
                                             <li>
-                                                <strong>Colabreting With</strong> <span>{colaretion}</span>
+                                                <strong>Colabreting With</strong> <span>{collaboration}</span>
                                             </li>
                                         ) : null}
                                         {!!date ? (
@@ -62,7 +62,7 @@ const Details = () => {
                                 </div>
                             </div>
                         </div>
-                        <Testimonials isProject Organizers={project?.Organizers || []} />
+                        <Testimonials isProject organizers={project?.organizers || []} />
                     </div>
                 </section>
             </main>
