@@ -3,6 +3,7 @@ import Header from '../../components/Header';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import Testimonials from '../../components/Testimonials';
 import Footer from '../../components/Footer';
+import Portfolio from './components/Portfolio';
 
 const Projects = () => {
     return (
@@ -13,6 +14,7 @@ const Projects = () => {
             {/*  ======= Main Section =======  */}
             <main id='main'>
                 <Breadcrumbs Title='Projects' />
+                <Portfolio />
                 <Testimonials />
             </main>
 

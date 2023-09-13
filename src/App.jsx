@@ -11,6 +11,7 @@ import BloodDonation from './pages/Donations/Blood';
 import FoodDonation from './pages/Donations/Food';
 import FinancialSupport from './pages/Donations/Financial';
 import Contact from './pages/Contact';
+import Details from './pages/Projects/components/Details';
 
 import './assets/styles/ui_style.scss';
 
@@ -22,6 +23,7 @@ function App() {
                 <Route path='/about' element={<AboutUs />} />
                 <Route path='/services' element={<Services />} />
                 <Route path='/projects' element={<Projects />} />
+                <Route path='/projects/:id' element={<Details />} />
                 <Route path='/donations/organ' element={<OrganDonation />} />
                 <Route path='/donations/blood' element={<BloodDonation />} />
                 <Route path='/donations/food' element={<FoodDonation />} />
