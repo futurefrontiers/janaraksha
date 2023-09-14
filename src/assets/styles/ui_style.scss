@@ -1126,6 +1126,9 @@ section {
 /*--------------------------------------------------------------
 # Alt Services Section
 --------------------------------------------------------------*/
+.alt-services {
+    padding-top: 0px;
+}
 .alt-services .img-bg {
     background-size: cover;
     background-position: center center;
@@ -1612,6 +1615,7 @@ section {
     margin: 20px 0;
     color: var(--color-secondary);
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .service-details .services-list a.active {
@@ -2697,4 +2701,21 @@ section {
 
 .footer .footer-legal .credits a {
     color: var(--color-primary);
+}
+
+.social-links-comming a {
+    font-size: 18px;
+    display: inline-block;
+    background: var(--color-primary);
+    color: #fff;
+    line-height: 1;
+    margin-right: 8px;
+    border-radius: 4px;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+
+.social-links-comming a:hover {
+    text-decoration: none;
 }
