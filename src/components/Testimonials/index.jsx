@@ -3,8 +3,8 @@ import { Pagination, FreeMode, Virtual, Autoplay } from 'swiper/modules';
 
 import { TESTIMONIAL_INFO } from '../../constants/testimonials';
 
-const Testimonials = function ({ isProject = false, Organizers = [] }) {
-    const Testimonials = isProject ? Organizers : TESTIMONIAL_INFO;
+const Testimonials = function ({ isProject = false, organizers = [] }) {
+    const Testimonials = isProject ? organizers : TESTIMONIAL_INFO;
     return (
         <>
             {Testimonials.length ? (

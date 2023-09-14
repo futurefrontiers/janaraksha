@@ -39,17 +39,10 @@ const Footer = () => {
                                         <i className='bi bi-linkedin' />
                                     </a>
                                 </div>
-
-                                <div className='mt-5'>
-                                    <img src={QR_COde} alt='Support' width='150px' />
-                                    <p className='mt-2' style={{ fontSize: '12px', marginLeft: '20px' }}>
-                                        Donate through UPI
-                                    </p>
-                                </div>
                             </div>
                         </div>
                         {/* End footer info column*/}
-                        <div className='col-lg-2 col-md-3 footer-links'>
+                        <div className='col-lg-3 col-md-3 footer-links'>
                             <h4>Useful Links</h4>
                             <ul>
                                 <li>
@@ -61,9 +54,6 @@ const Footer = () => {
                                     <Link to='/about'>About us</Link>
                                 </li>
                                 <li>
-                                    <Link to='/services'>Services</Link>
-                                </li>
-                                <li>
                                     <a href='#'>Terms of service</a>
                                 </li>
                                 <li>
@@ -72,7 +62,7 @@ const Footer = () => {
                             </ul>
                         </div>
                         {/* End footer links column*/}
-                        <div className='col-lg-2 col-md-3 footer-links'>
+                        <div className='col-lg-3 col-md-3 footer-links'>
                             <h4>Our Services</h4>
                             <ul>
                                 <li>
@@ -87,8 +77,14 @@ const Footer = () => {
                             </ul>
                         </div>
                         {/* End footer links column*/}
-                        <div className='col-lg-4 col-md-3 footer-links'>
-                            <h4>Get In Touch</h4>
+                        <div className='col-lg-2 col-md-3 footer-links'>
+                            <h4>Support Us</h4>
+                            <div>
+                                <img src={QR_COde} alt='Support' width='150px' />
+                                <p className='mt-2' style={{ fontSize: '12px', marginLeft: '20px' }}>
+                                    Donate through UPI
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

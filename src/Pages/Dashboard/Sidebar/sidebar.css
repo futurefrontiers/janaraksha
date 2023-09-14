@@ -13,7 +13,7 @@
 .menu-option {
   width: 100%;
   background-color: #fff;
-  padding: 16px 16px;
+  padding: 16px 18px;
   text-align: left;
   border: none;
   cursor: pointer;
@@ -26,4 +26,5 @@
 .menu-option.active {
   background-color: orangered;
   color: #fff;
+  font-weight: 500;
 }

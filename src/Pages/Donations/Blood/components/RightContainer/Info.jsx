@@ -5,7 +5,6 @@ import intro_image from '../../../../../assets/images/services.jpg';
 const Info = () => {
     return (
         <>
-            <img src={intro_image} alt='intro_image' className='img-fluid services-img' />
             <section id='alt-services' className='alt-services'>
                 <div className='container' data-aos='fade-up'>
                     <div className='row justify-content-around gy-4'>

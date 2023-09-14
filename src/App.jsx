@@ -13,6 +13,9 @@ import FinancialSupport from "./pages/Donations/Financial";
 import Contact from "./pages/Contact";
 import Details from "./pages/Projects/components/Details";
 import Dashboard from "./Pages/Dashboard/Dashboard";
+
+import Comming from './pages/Comming';
+
 import "./assets/styles/ui_style.scss";
 
 function App() {
@@ -24,15 +27,16 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:id" element={<Details />} />
-        <Route path="/donations/organ" element={<OrganDonation />} />
+        <Route path="/donations/organ" element={<Comming />} />
         <Route path="/donations/blood" element={<BloodDonation />} />
-        <Route path="/donations/food" element={<FoodDonation />} />
-        <Route path="/donations/financial" element={<FinancialSupport />} />
+        <Route path="/donations/food" element={<Comming />} />
+        <Route path="/donations/financial" element={<Comming />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/admin" element={<Dashboard />} />
       </Routes>
     </>
   );
-}
+
+
 
 export default App;

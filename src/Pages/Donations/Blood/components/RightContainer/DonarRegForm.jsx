@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react';
 
 import { STATES_LIST, DISTRICTS, CITIES } from '../../../../../constants/addressOptions';
+import { BLOOD_GROUP_OPTIONS } from '../../../../../constants/bloodGroups';
 
 const initialState = {
     districtList: [{ label: 'select District', value: '' }],
@@ -38,22 +39,32 @@ const DonarRegForm = () => {
                     automatically till next 3 Months. Also please update your profile/information if in case you relocate in future.
                 </p>
                 <div className='row gy-3'>
-                    <div className='col-md-12'>
+                    <div className='col-md-8'>
                         <input type='text' name='name' className='form-control' placeholder='Name' required='' />
                     </div>
-                    <div className='col-md-12 '>
+                    <div className='col-md-4'>
+                        <select className='form-select form-control' name='bloodgrp'>
+                            {BLOOD_GROUP_OPTIONS.map((grp, ind) => (
+                                <option key={ind} value={grp.value}>
+                                    {grp.label}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                    <div className='col-md-6'>
+                        <input type='number' className='form-control' name='phone' placeholder='Phone' required='' />
+                    </div>
+                    <div className='col-md-6 '>
                         <input type='email' className='form-control' name='email' placeholder='Email' required='' />
                     </div>
-                    <div className='col-md-12'>
-                        <input type='text' className='form-control' name='phone' placeholder='Phone' required='' />
+
+                    <div className='col-md-6'>
+                        <input type='password' className='form-control' name='password' placeholder='Password' required='' />
                     </div>
-                    <div className='col-md-12'>
-                        <input type='text' className='form-control' name='aadhar' placeholder='Aadhar' required='' />
+                    <div className='col-md-6'>
+                        <input type='password' className='form-control' name='c_password' placeholder='Confirm Password' required='' />
                     </div>
-                    <div className='col-md-12'>
-                        <input type='text' className='form-control' name='whatsapp' placeholder='whatsapp' required='' />
-                    </div>
-                    <div className='col-md-12'>
+                    <div className='col-md-4'>
                         <select className='form-select form-control' value={stateName} name='state' onChange={e => handleStateChange(e.target.value)}>
                             {STATES_LIST.map((state, ind) => (
                                 <option key={ind} value={state.value}>
@@ -62,7 +73,7 @@ const DonarRegForm = () => {
                             ))}
                         </select>
                     </div>
-                    <div className='col-md-12'>
+                    <div className='col-md-4'>
                         <select className='form-select form-control' name='district' onChange={e => handleDistrictChange(e.target.value)}>
                             {districtList.map((dist, ind) => (
                                 <option key={ind} value={dist.value}>
@@ -71,7 +82,7 @@ const DonarRegForm = () => {
                             ))}
                         </select>
                     </div>
-                    <div className='col-md-12'>
+                    <div className='col-md-4'>
                         <select className='form-select form-control' name='city'>
                             {citiesList.map((city, ind) => (
                                 <option key={ind} value={city.value}>
