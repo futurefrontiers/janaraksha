@@ -17,18 +17,13 @@ const Navbar = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/services' className={({ isActive }) => (isActive ? 'active' : '')}>
-                        Services
-                    </NavLink>
-                </li>
-                <li>
                     <NavLink to='/projects' className={({ isActive }) => (isActive ? 'active' : '')}>
                         Projects
                     </NavLink>
                 </li>
                 <li className='dropdown'>
                     <Link to='/donations'>
-                        <span>Donations</span> <i className='bi bi-chevron-down dropdown-indicator' />
+                        <span>Services</span> <i className='bi bi-chevron-down dropdown-indicator' />
                     </Link>
                     <ul>
                         <li>
