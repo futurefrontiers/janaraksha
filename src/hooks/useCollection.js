@@ -1,4 +1,4 @@
-import { collection, onSnapshot, query, addDoc } from "firebase/firestore"
+import { collection, onSnapshot, query, addDoc, setDoc, doc } from "firebase/firestore"
 import { useEffect, useState } from "react"
 import { db } from "../firebase"
 
@@ -24,8 +24,20 @@ export const useCollection = (collectionName) => {
 
     // function to create a document
     // in the specified collection.
-    async function create(newDoc) {
+    async function create(newDoc, docId = '') {
         const ref = getCollectionRef()
+        setErr(null)
+
+        // TODO: Need to refactor this a bit
+        if(docId) {
+            try {
+                await setDoc(doc(ref, docId), newDoc)
+                return true
+            }catch(e) {
+                setErr(e)
+                return false
+            }
+        }
 
         try {
             await addDoc(ref, newDoc)
