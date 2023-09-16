@@ -15,6 +15,7 @@ import Details from './pages/Projects/components/Details';
 import Comming from './pages/Comming';
 
 import './assets/styles/ui_style.scss';
+import { LocationFilters } from './components/LocationFilters/LocationFilters';
 
 function App() {
     return (
@@ -29,6 +30,7 @@ function App() {
                 <Route path='/donations/food' element={<Comming />} />
                 <Route path='/donations/financial' element={<Comming />} />
                 <Route path='/contact' element={<Contact />} />
+                <Route path="/showcase/location-filter" Component={LocationFilters} />
             </Routes>
         </>
     );
