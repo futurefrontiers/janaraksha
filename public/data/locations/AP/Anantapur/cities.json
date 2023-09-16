@@ -1,0 +1,16 @@
+{
+    "data": [
+        { "name": "Anantapur", "code": "Anantapur" },
+        { "name": "Dharmavaram", "code": "Dharmavaram" },
+        { "name": "Hindupur", "code": "Hindupur" },
+        { "name": "Guntakal", "code": "Guntakal" },
+        { "name": "Tadpatri", "code": "Tadpatri" },
+        { "name": "Kadiri", "code": "Kadiri" },
+        { "name": "Rayadurg", "code": "Rayadurg" },
+        { "name": "Kalyandurg", "code": "Kalyandurg" },
+        { "name": "Uravakonda", "code": "Uravakonda" },
+        { "name": "Gooty", "code": "Gooty" },
+        { "name": "Dhenukonda", "code": "Dhenukonda" },
+        { "name": "Puttaparthi", "code": "Puttaparthi" }
+    ]
+}

@@ -1,0 +1,144 @@
+{
+    "data": [
+        {
+            "name": "Select State",
+            "code": ""
+        },
+        {
+            "name": "Andhra Pradesh",
+            "code": "AP"
+        },
+        {
+            "name": "Arunachal Pradesh",
+            "code": "ArunachalPradesh"
+        },
+        {
+            "name": "Assam",
+            "code": "Assam"
+        },
+        {
+            "name": "Bihar",
+            "code": "Bihar"
+        },
+        {
+            "name": "Chhattisgarh",
+            "code": "Chhattisgarh"
+        },
+        {
+            "name": "Goa",
+            "code": "Goa"
+        },
+        {
+            "name": "Gujarat",
+            "code": "Gujarat"
+        },
+        {
+            "name": "Haryana",
+            "code": "Haryana"
+        },
+        {
+            "name": "Himachal Pradesh",
+            "code": "HimachalPradesh"
+        },
+        {
+            "name": "Jharkhand",
+            "code": "Jharkhand"
+        },
+        {
+            "name": "Karnataka",
+            "code": "Karnataka"
+        },
+        {
+            "name": "Kerala",
+            "code": "Kerala"
+        },
+        {
+            "name": "Madhya Pradesh",
+            "code": "MadhyaPradesh"
+        },
+        {
+            "name": "Maharashtra",
+            "code": "Maharashtra"
+        },
+        {
+            "name": "Manipur",
+            "code": "Manipur"
+        },
+        {
+            "name": "Meghalaya",
+            "code": "Meghalaya"
+        },
+        {
+            "name": "Mizoram",
+            "code": "Mizoram"
+        },
+        {
+            "name": "Nagaland",
+            "code": "Nagaland"
+        },
+        {
+            "name": "Odisha",
+            "code": "Odisha"
+        },
+        {
+            "name": "Punjab",
+            "code": "Punjab"
+        },
+        {
+            "name": "Rajasthan",
+            "code": "Rajasthan"
+        },
+        {
+            "name": "Sikkim",
+            "code": "Sikkim"
+        },
+        {
+            "name": "Tamil Nadu",
+            "code": "TamilNadu"
+        },
+        {
+            "name": "Telangana",
+            "code": "Telangana"
+        },
+        {
+            "name": "Tripura",
+            "code": "Tripura"
+        },
+        {
+            "name": "Uttar Pradesh",
+            "code": "UttarPradesh"
+        },
+        {
+            "name": "Uttarakhand",
+            "code": "Uttarakhand"
+        },
+        {
+            "name": "West Bengal",
+            "code": "WestBengal"
+        },
+        {
+            "name": "Andaman and Nicobar Islands",
+            "code": "AndamanAndNicobarIslands"
+        },
+        {
+            "name": "Chandigarh",
+            "code": "Chandigarh"
+        },
+        {
+            "name": "Dadra and Nagar Haveli and Daman and Diu",
+            "code": "DadraAndNagarHaveliAndDamanAndDiu"
+        },
+        {
+            "name": "Lakshadweep",
+            "code": "Lakshadweep"
+        },
+        {
+            "name": "Delhi",
+            "code": "Delhi"
+        },
+        {
+            "name": "Puducherry",
+            "code": "Puducherry"
+        }
+    ]
+}

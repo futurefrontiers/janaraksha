@@ -1,0 +1,17 @@
+{
+    "data": [
+        { "name": "Anantapur", "code": "Anantapur" },
+        { "name": "Chittoor", "code": "Chittoor" },
+        { "name": "East Godavari", "code": "EastGodavari" },
+        { "name": "Guntur", "code": "Guntur" },
+        { "name": "Krishna", "code": "Krishna" },
+        { "name": "Kurnool", "code": "Kurnool" },
+        { "name": "Nellore", "code": "Nellore" },
+        { "name": "Prakasam", "code": "Prakasam" },
+        { "name": "Srikakulam", "code": "Srikakulam" },
+        { "name": "Visakhapatnam", "code": "Visakhapatnam" },
+        { "name": "Vizianagaram", "code": "Vizianagaram" },
+        { "name": "West Godavari", "code": "WestGodavari" },
+        { "name": "YSR Kadapa", "code": "YSRKadapa" }
+    ]
+}
