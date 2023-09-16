@@ -12,13 +12,13 @@ export const useAuth = () => {
     }, [user])
 
     async function createAccount(email, password) {
-        console.log('create account')
         try {
             const userCreds = await createUserWithEmailAndPassword(auth, email, password)
             setUser(userCreds.user)
-            console.log('userCreds: ', userCreds)
+            return userCreds.user.uid
         }catch(e) {
-            console.log('error: ', e)
+            console.log('failed to create account with email: ', email, ', err: ',e)
+            return null
         }
     }
 
