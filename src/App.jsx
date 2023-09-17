@@ -16,10 +16,12 @@ import Comming from './pages/Comming';
 
 import './assets/styles/ui_style.scss';
 import { LocationFilters } from './components/LocationFilters/LocationFilters';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
     return (
         <>
+            <Toaster />
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/about' element={<AboutUs />} />
