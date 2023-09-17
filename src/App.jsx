@@ -1,16 +1,18 @@
-import React from 'react';
+import React from "react";
 
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from "react-router-dom";
 
-import Home from './pages/Home';
-import AboutUs from './pages/About';
-import Projects from './pages/Projects';
-import OrganDonation from './pages/Donations/Organ';
-import BloodDonation from './pages/Donations/Blood';
-import FoodDonation from './pages/Donations/Food';
-import FinancialSupport from './pages/Donations/Financial';
-import Contact from './pages/Contact';
-import Details from './pages/Projects/components/Details';
+import Home from "./pages/Home";
+import AboutUs from "./pages/About";
+import Services from "./pages/Services";
+import Projects from "./pages/Projects";
+import OrganDonation from "./pages/Donations/Organ";
+import BloodDonation from "./pages/Donations/Blood";
+import FoodDonation from "./pages/Donations/Food";
+import FinancialSupport from "./pages/Donations/Financial";
+import Contact from "./pages/Contact";
+import Details from "./pages/Projects/components/Details";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 
 import Comming from './pages/Comming';
 
@@ -32,6 +34,7 @@ function App() {
                 <Route path='/donations/food' element={<Comming />} />
                 <Route path='/donations/financial' element={<Comming />} />
                 <Route path='/contact' element={<Contact />} />
+                <Route path="/admin" element={<Dashboard />} />
                 <Route path="/showcase/location-filter" Component={LocationFilters} />
             </Routes>
         </>

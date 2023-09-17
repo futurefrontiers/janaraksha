@@ -1,0 +1,56 @@
+.main {
+  margin: 10px 12px;
+  padding: 10px 16px;
+  width: 88vw;
+  height: 86vh;
+}
+
+.search_fields {
+  background-color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.search_field {
+  display: flex;
+  background-color: #f4f5fb;
+  width: 80px;
+  border-radius: 50%;
+}
+.search_fields input {
+  border: none;
+  background-color: #f4f5fb;
+  padding: 6px 12px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.search_fields input:focus,
+.search_fields input:active,
+.search_fields input:focus-visible {
+  border: none;
+  background-color: #f4f5fb;
+  padding: 6px 12px;
+}
+.search_fields i {
+  cursor: pointer;
+  background-color: #f4f5fb;
+  font-size: 18px;
+  padding: 9px 16px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.table_container {
+  background-color: #fff;
+  padding: 18px 24px;
+  border-radius: 10px;
+}
+.data_table tr {
+  width: 82vw;
+
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+}
+.data_table td {
+}
