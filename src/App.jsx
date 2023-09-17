@@ -4,12 +4,8 @@ import { Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
 import AboutUs from "./pages/About";
-import Services from "./pages/Services";
 import Projects from "./pages/Projects";
-import OrganDonation from "./pages/Donations/Organ";
 import BloodDonation from "./pages/Donations/Blood";
-import FoodDonation from "./pages/Donations/Food";
-import FinancialSupport from "./pages/Donations/Financial";
 import Contact from "./pages/Contact";
 import Details from "./pages/Projects/components/Details";
 import Dashboard from "./Pages/Dashboard/Dashboard";
