@@ -41,7 +41,7 @@ const locationReducer = (s, {type, value}) => {
 export const LocationFilters = ({ location, onChange }) => {
   const [loc, setLoc] = useReducer(locationReducer, {
     ...initialValue,
-    ...location
+    ...(location || {})
   })
 
   const [states, setStates] = useState([])
@@ -57,7 +57,10 @@ export const LocationFilters = ({ location, onChange }) => {
     const locationObj = location || {}
     setLoc({
       type: 'all', 
-      value: locationObj
+      value: {
+        ...initialValue,
+        ...(location || {})
+      }
     })
 
     if(locationObj.state) {
@@ -68,7 +71,6 @@ export const LocationFilters = ({ location, onChange }) => {
     }
   }, [location])
 
-  // update the location
   useEffect(() => {
     onChange && onChange(loc)
   }, [loc])
