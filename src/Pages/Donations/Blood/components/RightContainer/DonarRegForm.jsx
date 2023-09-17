@@ -56,10 +56,12 @@ const DonarRegForm = () => {
         // Number should start with 9876 and
         // it should have 10 digits.
         const phoneRegex = /^(9876)\d{9}$/;
+        const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         
         if(!isReqFieldsPresent) return false
         else if(!donor.confirmPassword || donor.password != donor.confirmPassword) return false
         else if(!phoneRegex.test(donor.phone)) return false
+        else if(!emailRegex.test(donor.email)) return false
         return true
     }
 
