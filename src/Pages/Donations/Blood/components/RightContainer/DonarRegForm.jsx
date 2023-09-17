@@ -52,9 +52,14 @@ const DonarRegForm = () => {
             })
             return isPresent
         })
+
+        // Number should start with 9876 and
+        // it should have 10 digits.
+        const phoneRegex = /^(9876)\d{9}$/;
         
         if(!isReqFieldsPresent) return false
         else if(!donor.confirmPassword || donor.password != donor.confirmPassword) return false
+        else if(!phoneRegex.test(donor.phone)) return false
         return true
     }
 
