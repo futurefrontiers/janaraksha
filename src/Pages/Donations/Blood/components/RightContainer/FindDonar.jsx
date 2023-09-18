@@ -83,6 +83,13 @@ const FindDonar = () => {
                         </tr>
                     </thead>
                     <tbody>
+                        {/* No Data */}
+                        {docs.length == 0 && (
+                            <tr>
+                                <td colSpan="4">No donors found. Please refine your search and try again.</td>
+                            </tr>
+                        )}
+                            
                         {docs.map(({data, id}) => (
                             <tr key={id}>
                                 <td>{data.name}</td>
