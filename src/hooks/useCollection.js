@@ -1,16 +1,30 @@
-import { collection, onSnapshot, query, addDoc, setDoc, doc } from "firebase/firestore"
+import { collection, onSnapshot, query, addDoc, setDoc, doc, where, and } from "firebase/firestore"
 import { useEffect, useState } from "react"
 import { db } from "../firebase"
 
-export const useCollection = (collectionName) => {
+export const useCollection = (collectionName, options = {filters: []}) => {
     const [docs, setDocs] = useState([])
     const [loading, setLoading] = useState(false)
+    const [opts, setOpts] = useState(options)
     const [err, setErr] = useState()
 
     function cleanup() {
         setErr(null)
         setDocs([])
         setLoading(false)
+    }
+
+    function buildFilters(filters) {
+        if(!filters || !filters.length) return null
+
+        const conditions = filters.map(filter => {
+            const name = filter.col
+            const operator = filter.operator
+            const value = filter.value
+            return where(name, operator, value)
+        })
+
+        return conditions
     }
 
     // Function return the firebase collection
@@ -55,14 +69,17 @@ export const useCollection = (collectionName) => {
             setErr('collectionRef must not be empty')
             return
         }
+        let unsub = null
+
+        // build filters
+        const conditions = buildFilters(opts.filters)
 
         // initialize loading.
         setLoading(true)
 
-        // TODO: need to support queries, orderby.
+        // TODO: need to support orderby.
         // get all the docs from the collection.
-        const q = query(collectionRef)
-        let unsub = null
+        const q = conditions ? query(collectionRef, and(...conditions)) : query(collectionRef)
 
         try {
             unsub = onSnapshot(q, (querySnapshot) => {
@@ -80,9 +97,17 @@ export const useCollection = (collectionName) => {
 
         // before unmounting should clear open connections.
         return () => unsub ? unsub() : {}
-    }, [collectionName])
+    }, [collectionName, JSON.stringify(opts)])
+
+    function setFilters(filters = []) {
+        setOpts(options => ({
+            ...options,
+            filters
+        }))
+    }
 
     return {
+        setFilters,
         docs,
         err,
         loading,

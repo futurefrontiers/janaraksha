@@ -91,6 +91,7 @@ const DonarRegForm = () => {
         try {
             await create({
                 ...rest, 
+                email,
                 last_donanted_at: null, 
                 can_donate: true 
             }, userId)
