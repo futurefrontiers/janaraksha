@@ -9,6 +9,7 @@ import BloodDonation from "./pages/Donations/Blood";
 import Contact from "./pages/Contact";
 import Details from "./pages/Projects/components/Details";
 import Dashboard from "./Pages/Dashboard/Dashboard";
+import { Login } from './pages/Auth'
 
 import Comming from './pages/Comming';
 
@@ -31,6 +32,7 @@ function App() {
                 <Route path='/donations/financial' element={<Comming />} />
                 <Route path='/contact' element={<Contact />} />
                 <Route path="/admin" element={<Dashboard />} />
+                <Route path="/auth/login" element={<Login />} />
                 <Route path="/showcase/location-filter" Component={LocationFilters} />
             </Routes>
         </>
