@@ -1,20 +1,20 @@
-import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-const SideBar = ({ handleSelection, selectedOption }) => {
+const SideBar = () => {
     return (
         <div className='services-list'>
-            <a onClick={() => handleSelection('info')} className={selectedOption === 'info' ? 'active' : ''}>
+            <NavLink to='/donations/blood' className={({ isActive }) => (isActive ? 'active' : '')}>
                 Blood Donation
-            </a>
-            <a onClick={() => handleSelection('donars')} className={selectedOption === 'donars' ? 'active' : ''}>
+            </NavLink>
+            <NavLink to='/donations/blood/register' className={({ isActive }) => (isActive ? 'active' : '')}>
                 Become a Donar
-            </a>
-            <a onClick={() => handleSelection('find_donar')} className={selectedOption === 'find_donar' ? 'active' : ''}>
-                Find Donars
-            </a>
-            <a onClick={() => handleSelection('banks')} className={selectedOption === 'banks' ? 'active' : ''}>
+            </NavLink>
+            <NavLink to='/donations/blood/find' className={({ isActive }) => (isActive ? 'active' : '')}>
+                Find Donar
+            </NavLink>
+            <NavLink to='/donations/blood/banks' className={({ isActive }) => (isActive ? 'active' : '')}>
                 Blood Banks
-            </a>
+            </NavLink>
         </div>
     );
 };

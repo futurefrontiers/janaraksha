@@ -55,7 +55,7 @@ const Portfolio = () => {
         <section id='projects' className='projects'>
             <div className='container' data-aos='fade-up'>
                 <div className='portfolio-isotope' data-portfolio-filter='*' data-portfolio-layout='masonry' data-portfolio-sort='original-order'>
-                    <ul className='portfolio-flters' data-aos='fade-up' data-aos-delay={100}>
+                    {/* <ul className='portfolio-flters' data-aos='fade-up' data-aos-delay={100}>
                         <li data-filter='*' className='filter-active'>
                             All
                         </li>
@@ -63,7 +63,7 @@ const Portfolio = () => {
                         <li data-filter='.blood-donation'>Blood Donation</li>
                         <li data-filter='.food-donation'>Food Donation</li>
                         <li data-filter='.job-mela'>Job mela's</li>
-                    </ul>
+                    </ul> */}
                     {/* End Projects Filters */}
                     <div className='row gy-4 portfolio-container' data-aos='fade-up' data-aos-delay={200}>
                         {PORTFOLIO_DATA.map(p => (
@@ -71,14 +71,14 @@ const Portfolio = () => {
                                 <div className='portfolio-content h-100'>
                                     <img src={p.imageSrc} className='img-fluid' alt='' />
                                     <div className='portfolio-info'>
-                                        <h4>{p.heading}</h4>
+                                        {/* <h4>{p.heading}</h4>
                                         <p>{p.desc}</p>
                                         <a href={p.imageSrc} title={p.heading} data-gallery={p.gallery} className='glightbox preview-link'>
                                             <i className='bi bi-zoom-in' />
                                         </a>
                                         <a onClick={() => navigate(`/projects/${p.id}`)} title='More Details' className='details-link'>
                                             <i className='bi bi-link-45deg' />
-                                        </a>
+                                        </a> */}
                                     </div>
                                 </div>
                             </div>

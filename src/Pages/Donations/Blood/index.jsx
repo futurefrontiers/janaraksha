@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import Header from '../../../components/Header';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import Footer from '../../../components/Footer';
@@ -7,12 +6,6 @@ import SideContainer from './components/SideContainer';
 import RightContainer from './components/RightContainer';
 
 const BloodDonation = () => {
-    const [selectedOption, setSelectedOption] = useState('info');
-
-    const handleSelection = opt => {
-        setSelectedOption(opt);
-    };
-
     return (
         <>
             {/*  ======= Header Section ======= */}
@@ -26,11 +19,11 @@ const BloodDonation = () => {
                     <div className='container' data-aos='fade-up' data-aos-delay='100'>
                         <div className='row gy-4'>
                             <div className='col-lg-4'>
-                                <SideBar selectedOption={selectedOption} handleSelection={handleSelection} />
-                                <SideContainer selectedOption={selectedOption} />
+                                <SideBar />
+                                <SideContainer />
                             </div>
                             <div className='col-lg-8'>
-                                <RightContainer selectedOption={selectedOption} />
+                                <RightContainer />
                             </div>
                         </div>
                     </div>
