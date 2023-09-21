@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { NavLink, Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -18,10 +16,15 @@ const Navbar = () => {
                 </li>
                 <li>
                     <NavLink to='/projects' className={({ isActive }) => (isActive ? 'active' : '')}>
-                        Projects
+                        Gallery
                     </NavLink>
                 </li>
-                <li className='dropdown'>
+                <li>
+                    <NavLink to='/donations/blood' className={({ isActive }) => (isActive ? 'active' : '')}>
+                        Blood Donation
+                    </NavLink>
+                </li>
+                {/* <li className='dropdown'>
                     <Link to='/donations'>
                         <span>Services</span> <i className='bi bi-chevron-down dropdown-indicator' />
                     </Link>
@@ -39,7 +42,7 @@ const Navbar = () => {
                             <Link to='/donations/financial'>Financial Assistance</Link>
                         </li>
                     </ul>
-                </li>
+                </li> */}
                 <li>
                     <NavLink to='/contact' className={({ isActive }) => (isActive ? 'active' : '')}>
                         Contact

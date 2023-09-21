@@ -1,5 +1,5 @@
 export const BLOOD_GROUP_OPTIONS = [
-    { label: 'all', value: 'all' },
+    { label: 'Blood Group', value: '' },
     { label: 'A+', value: 'A+' },
     { label: 'A-', value: 'A-' },
     { label: 'B+', value: 'B+' },

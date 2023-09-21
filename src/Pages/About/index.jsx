@@ -1,9 +1,7 @@
-import React from 'react';
 import Header from '../../components/Header';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import Intro from './components/Intro';
-import Counter from './components/Counter';
-import Testimonials from '../../components/Testimonials';
+import Team from './components/Team';
 import Footer from '../../components/Footer';
 
 const AboutUs = () => {
@@ -16,8 +14,7 @@ const AboutUs = () => {
             <main id='main'>
                 <Breadcrumbs Title='About' />
                 <Intro />
-                <Counter />
-                <Testimonials />
+                <Team />3
             </main>
 
             {/*  ======= Footer Section ======= */}

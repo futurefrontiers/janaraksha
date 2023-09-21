@@ -54,25 +54,40 @@ const Footer = () => {
                                     <Link to='/about'>About us</Link>
                                 </li>
                                 <li>
-                                    <a href='#'>Terms of service</a>
+                                    <Link to='/projects'>Gallery</Link>
                                 </li>
                                 <li>
-                                    <a href='#'>Privacy policy</a>
+                                    <Link to='/contact'>Contact Us</Link>
+                                </li>
+                                <li>
+                                    <Link to='/terms'>Terms & Conditions</Link>
+                                </li>
+                                <li>
+                                    <Link to='/privacyPolicy'>Privacy policy</Link>
                                 </li>
                             </ul>
                         </div>
                         {/* End footer links column*/}
                         <div className='col-lg-3 col-md-3 footer-links'>
-                            <h4>Our Services</h4>
+                            <h4>Trust Activities</h4>
                             <ul>
-                                <li>
-                                    <Link to='/donations/organ'>Organ Donation</Link>
-                                </li>
                                 <li>
                                     <Link to='/donations/blood'>Blood Donation</Link>
                                 </li>
                                 <li>
-                                    <Link to='/donations/food'>Food Donation</Link>
+                                    <Link to='/contact'>Organ Donation</Link>
+                                </li>
+                                <li>
+                                    <Link to='/contact'>Food Donation</Link>
+                                </li>
+                                <li>
+                                    <Link to='/contact'>Plantation</Link>
+                                </li>
+                                <li>
+                                    <Link to='/contact'>Books & Education</Link>
+                                </li>
+                                <li>
+                                    <Link to='/contact'>Job Mela</Link>
                                 </li>
                             </ul>
                         </div>

@@ -1,9 +1,7 @@
-import React from 'react';
-
 const BooldBanks = () => {
     return (
         <section id='alt-services' className='alt-services'>
-            <h3>Comming Soon..!</h3>
+            <h3>Coming Soon..!</h3>
             <div className='container'>
                 <p>Thank you for being a part of our mission to create a brighter future for all. Together, we can make a lasting difference. !</p>
                 <p>Follow us on social media to stay connected with our journey: </p>

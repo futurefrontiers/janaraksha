@@ -4,49 +4,49 @@ import { useEffect, useState } from 'react';
 import { useCollection } from '../../../../../hooks';
 
 const FindDonar = () => {
-    const [bg, setBg] = useState('all')
-    const [location, setLocation] = useState({})
+    const [bg, setBg] = useState('all');
+    const [location, setLocation] = useState({});
     const { docs, setFilters } = useCollection('donors');
 
     useEffect(() => {
-        refineSearch()
-    }, [])
+        refineSearch();
+    }, []);
 
-    const refineSearch = (ev) => {
-        if(ev && ev.preventDefault) {
+    const refineSearch = ev => {
+        if (ev && ev.preventDefault) {
             ev.preventDefault();
         }
-        const filters = []
+        const filters = [];
 
         // Filter donors who are ready to donate.
         filters.push({
             col: 'can_donate',
             operator: '==',
-            value: true
-        })
+            value: true,
+        });
 
         // Add location filters if present.
-        if(location) {
-            if(location.state) {
-                filters.push({col: 'location.state', operator: '==', value: location.state})
+        if (location) {
+            if (location.state) {
+                filters.push({ col: 'location.state', operator: '==', value: location.state });
             }
-            if(location.district) {
-                filters.push({col: 'location.district', operator: '==', value: location.district})
+            if (location.district) {
+                filters.push({ col: 'location.district', operator: '==', value: location.district });
             }
-            if(location.city) {
-                filters.push({col: 'location.city', operator: '==', value: location.city})
+            if (location.city) {
+                filters.push({ col: 'location.city', operator: '==', value: location.city });
             }
         }
 
         // Add blood group filter
-        if(bg && bg != 'all') {
-            filters.push({col: 'blood_group', operator: '==', value: bg})
+        if (bg && bg != 'all') {
+            filters.push({ col: 'blood_group', operator: '==', value: bg });
         }
-        setFilters(filters)
-    }
+        setFilters(filters);
+    };
 
     function handleLocationChange(location) {
-        setLocation(location)
+        setLocation(location);
     }
 
     return (
@@ -66,7 +66,9 @@ const FindDonar = () => {
                         </div>
                         <LocationFilters onChange={handleLocationChange} />
                         <div className='col-md-1'>
-                            <button type='submit' className='btn btn-primary'>Search</button>
+                            <button type='submit' className='btn btn-primary'>
+                                Search
+                            </button>
                         </div>
                     </div>
                 </form>
@@ -86,11 +88,11 @@ const FindDonar = () => {
                         {/* No Data */}
                         {docs.length == 0 && (
                             <tr>
-                                <td colSpan="4">No donors found. Please refine your search and try again.</td>
+                                <td colSpan='4'>No donors found. Please refine your search and try again.</td>
                             </tr>
                         )}
-                            
-                        {docs.map(({data, id}) => (
+
+                        {docs.map(({ data, id }) => (
                             <tr key={id}>
                                 <td>{data.name}</td>
                                 <td>{data.blood_group}</td>
