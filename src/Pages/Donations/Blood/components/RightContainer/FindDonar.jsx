@@ -64,7 +64,7 @@ const FindDonar = () => {
                                 ))}
                             </select>
                         </div>
-                        <LocationFilters onChange={handleLocationChange} />
+                        <LocationFilters onChange={handleLocationChange} isFilter />
                         <div className='col-md-1'>
                             <button type='submit' className='btn btn-primary'>
                                 Search

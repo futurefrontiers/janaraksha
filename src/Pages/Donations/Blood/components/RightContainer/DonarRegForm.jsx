@@ -6,22 +6,22 @@ import { useCollection, useAuth } from '../../../../../hooks';
 import toast from 'react-hot-toast';
 
 const DonarFormReducer = (state, newState) => {
-    if(newState === 'reset') return {}
+    if (newState === 'reset') return {};
     return {
         ...state,
-        ...newState
-    }
-}
+        ...newState,
+    };
+};
 
 const toastSettings = {
     duration: 4000,
     position: 'top-right',
-    id: 'donor-reg'
-}
+    id: 'donor-reg',
+};
 
 const DonarRegForm = () => {
-    const { create, loading } = useCollection('donors')
-    const { isLoggedIn, createAccount, loading: authLoading } = useAuth()
+    const { create, loading } = useCollection('donors');
+    const { isLoggedIn, createAccount, loading: authLoading } = useAuth();
     const [donor, setDonor] = useReducer(DonarFormReducer, {
         name: '',
         email: '',
@@ -30,91 +30,94 @@ const DonarRegForm = () => {
         location: {
             state: '',
             district: '',
-            city: ''
+            city: '',
         },
         share_bio_consent: false,
         password: '',
-        confirmPassword: ''
+        confirmPassword: '',
     });
-    
+
     // TODO: Need to enhance it further.
-    const validateDonor = (donor) => {
-        console.log('donor: ', donor)
-        const reqFields = ['name', 'blood_group', 'phone', 'email', 'password', 'share_bio_consent', 'location.state', 'location.district', 'location.city']
+    const validateDonor = donor => {
+        console.log('donor: ', donor);
+        const reqFields = ['name', 'blood_group', 'phone', 'email', 'password', 'share_bio_consent', 'location.state', 'location.district', 'location.city'];
 
         const isReqFieldsPresent = reqFields.every(path => {
-            const keys = path.split('.')
-            let current = donor
+            const keys = path.split('.');
+            let current = donor;
             const isPresent = keys.every(k => {
-                if(current[k] == null || current[k] == undefined || current[k] == "") return false
-                current = current[k]
-                return true
-            })
-            return isPresent
-        })
+                if (current[k] == null || current[k] == undefined || current[k] == '') return false;
+                current = current[k];
+                return true;
+            });
+            return isPresent;
+        });
 
         // Number should start with 9876 and
         // it should have 10 digits.
         const phoneRegex = /^(9876)\d{9}$/;
         const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        
-        if(!isReqFieldsPresent) return false
-        else if(!donor.confirmPassword || donor.password != donor.confirmPassword) return false
-        else if(!phoneRegex.test(donor.phone)) return false
-        else if(!emailRegex.test(donor.email)) return false
-        return true
-    }
 
-    const handleSubmit = async (ev) => {
+        if (!isReqFieldsPresent) return false;
+        else if (!donor.confirmPassword || donor.password != donor.confirmPassword) return false;
+        else if (!phoneRegex.test(donor.phone)) return false;
+        else if (!emailRegex.test(donor.email)) return false;
+        return true;
+    };
+
+    const handleSubmit = async ev => {
         ev.preventDefault();
-        const isValidDonorObj = validateDonor(donor)
+        const isValidDonorObj = validateDonor(donor);
 
-        if(!isValidDonorObj) {
-            toast.error('Pleae fill the required fields', toastSettings)
-            return
+        if (!isValidDonorObj) {
+            toast.error('Pleae fill the required fields', toastSettings);
+            return;
         }
 
-        delete donor.confirmPassword
-        const { email, password, ...rest } = donor
+        delete donor.confirmPassword;
+        const { email, password, ...rest } = donor;
 
         // Create account with email and password.
-        toast.loading('Creating account...', toastSettings)
-        let userId = await createAccount(email, password)
+        toast.loading('Creating account...', toastSettings);
+        let userId = await createAccount(email, password);
 
-        if(!userId) {
-            toast.error('Failed to create account with email: ' + email, toastSettings)
-            return
+        if (!userId) {
+            toast.error('Failed to create account with email: ' + email, toastSettings);
+            return;
         }
 
-        toast.loading('Saving donor info...', toastSettings)
+        toast.loading('Saving donor info...', toastSettings);
         // Create profile info for donor.
         try {
-            await create({
-                ...rest, 
-                email,
-                last_donanted_at: null, 
-                can_donate: true 
-            }, userId)
-            toast.success('Successfully Registered', toastSettings)
-            resetForm()
+            await create(
+                {
+                    ...rest,
+                    email,
+                    last_donanted_at: null,
+                    can_donate: true,
+                },
+                userId
+            );
+            toast.success('Successfully Registered', toastSettings);
+            resetForm();
         } catch (e) {
-            toast.error('failed to save donor info', toastSettings)
+            toast.error('failed to save donor info', toastSettings);
         }
-    }
+    };
 
     const resetForm = () => {
-        setDonor('reset')
-    }
+        setDonor('reset');
+    };
 
-    const handleFormChange = (ev) => {
-        const value = ev.target.value
-        const name = ev.target.name
-        setDonor({[name]: value})
-    }
+    const handleFormChange = ev => {
+        const value = ev.target.value;
+        const name = ev.target.name;
+        setDonor({ [name]: value });
+    };
 
-    const handleLocationChange = (location) => {
-        setDonor({location})
-    }
+    const handleLocationChange = location => {
+        setDonor({ location });
+    };
 
     return (
         <div className='doner_form'>
@@ -150,15 +153,14 @@ const DonarRegForm = () => {
                     <div className='col-md-6'>
                         <input type='password' className='form-control' value={donor.confirmPassword} name='confirmPassword' placeholder='Confirm Password' onChange={handleFormChange} />
                     </div>
+                    <LocationFilters onChange={handleLocationChange} />
                 </div>
 
-                <LocationFilters onChange={handleLocationChange}/>
-
-                <div className="row">
+                <div className='row'>
                     <div className='col-md-12'>
                         <div className='form-check d-flex'>
-                            <input className='form-check-input' name="share_bio_consent" id="share_bio_consent" value={donor.share_bio_consent} type='checkbox' onChange={handleFormChange} />
-                            <label className='form-check-label cursor-pointer' htmlFor="share_bio_consent">
+                            <input className='form-check-input' name='share_bio_consent' id='share_bio_consent' value={donor.share_bio_consent} type='checkbox' onChange={handleFormChange} />
+                            <label className='form-check-label cursor-pointer' htmlFor='share_bio_consent'>
                                 <p className='ml-4'>I authorise this website to display my name and telephone number, so that the needy could contact me, as and when there is an emergency.</p>
                             </label>
                         </div>
@@ -167,7 +169,9 @@ const DonarRegForm = () => {
                         <div className='loading'>Loading</div>
                         <div className='error-message' />
                         <div className='sent-message'>Your quote request has been sent successfully. Thank you!</div>
-                        <button type='submit' disabled={loading || authLoading} onClick={handleSubmit}>Register</button>
+                        <button type='submit' disabled={loading || authLoading} onClick={handleSubmit}>
+                            Register
+                        </button>
                     </div>
                 </div>
             </form>

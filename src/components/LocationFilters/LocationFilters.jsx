@@ -38,7 +38,7 @@ const locationReducer = (s, { type, value }) => {
 };
 
 // eslint-disable-next-line react/prop-types
-export const LocationFilters = ({ location, onChange }) => {
+export const LocationFilters = ({ location, onChange, isFilter = false }) => {
     const [loc, setLoc] = useReducer(locationReducer, {
         ...initialValue,
         ...(location || {}),
@@ -114,7 +114,7 @@ export const LocationFilters = ({ location, onChange }) => {
     return (
         <>
             {/* STATE */}
-            <div className='col-md-3'>
+            <div className={isFilter ? 'col-md-3' : 'col-md-4'}>
                 <select className='form-select form-control' value={loc.state} name='state' onChange={e => handleLocationChange('state', e.target.value)}>
                     {states.map(state => (
                         <option key={state.code} value={state.code}>
@@ -125,7 +125,7 @@ export const LocationFilters = ({ location, onChange }) => {
             </div>
 
             {/* DISTRICT */}
-            <div className='col-md-3'>
+            <div className={isFilter ? 'col-md-3' : 'col-md-4'}>
                 <select value={loc.district} className='form-select form-control' name='district' disabled={!loc.state} onChange={e => handleLocationChange('district', e.target.value)}>
                     <option value=''>Select District</option>
                     {districts.map(district => (
@@ -137,7 +137,7 @@ export const LocationFilters = ({ location, onChange }) => {
             </div>
 
             {/* CITY */}
-            <div className='col-md-3'>
+            <div className={isFilter ? 'col-md-3' : 'col-md-4'}>
                 <select value={loc.city} disabled={!loc.district} className='form-select form-control' name='city' onChange={e => handleLocationChange('city', e.target.value)}>
                     <option value=''>Select City</option>
                     {cities.map(city => (

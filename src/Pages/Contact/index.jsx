@@ -55,7 +55,7 @@ const Contact = () => {
                                     style={{ border: 0, width: '100%', height: 384 }}
                                     allowFullScreen=''
                                     loading='lazy'
-                                    referrerpolicy='no-referrer-when-downgrade'></iframe>
+                                    referrerPolicy='no-referrer-when-downgrade'></iframe>
                             </div>
                             {/* End Google Maps */}
                             <div className='col-lg-6'>
