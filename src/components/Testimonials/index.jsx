@@ -2,9 +2,20 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, FreeMode, Virtual, Autoplay } from 'swiper/modules';
 
 import { TESTIMONIAL_INFO } from '../../constants/testimonials';
+import { useWindowDimensions } from '../../hooks';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 const Testimonials = function ({ isProject = false, organizers = [] }) {
+    const { width } = useWindowDimensions()
+    const [isMobile, setIsMobile] = useState(false)
     const Testimonials = isProject ? organizers : TESTIMONIAL_INFO;
+
+    useEffect(() => {
+        const mobile = width < 769
+        setIsMobile(mobile)
+    }, [width])
+
     return (
         <>
             {Testimonials.length ? (
@@ -29,7 +40,7 @@ const Testimonials = function ({ isProject = false, organizers = [] }) {
                             pagination={{ clickable: true }}
                             modules={[Pagination, FreeMode, Virtual, Autoplay]}
                             spaceBetween={50}
-                            slidesPerView={2}
+                            slidesPerView={isMobile ? 1 : 2}
                             className='slides-2 swiper'>
                             {Testimonials.map((testimonial, ind) => (
                                 <div className='swiper-wrapper' key={ind}>
