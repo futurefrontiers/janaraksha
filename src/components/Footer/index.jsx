@@ -23,7 +23,7 @@ const Footer = () => {
 
     return (
         <>
-            {showMobileFooter ? (
+            {(
                 <footer id='footer' className='footer'>
                     <div className='footer-content position-relative'>
                         <div className='container'>
@@ -137,8 +137,6 @@ const Footer = () => {
                         </div>
                     </div>
                 </footer>
-            ) : (
-                <footer className='mobile-footer'>Footer</footer>
             )}
         </>
     );

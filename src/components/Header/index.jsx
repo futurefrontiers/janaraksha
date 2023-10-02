@@ -6,7 +6,7 @@ const Header = () => {
     const [isMobileNavActive, setMobileNavActive] = useState(false);
 
     const mobileNavToggle = () => {
-        setMobileNavActive(!isMobileNavActive);
+        setMobileNavActive((val) => !val);
     };
 
     return (
