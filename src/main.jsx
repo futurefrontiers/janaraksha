@@ -15,6 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'aos/dist/aos.css';
 import 'glightbox/dist/css/glightbox.css';
+import './assets/styles/ui_style.scss';
 import './assets/styles/styles.scss';
 
 createRoot(document.getElementById('root')).render(

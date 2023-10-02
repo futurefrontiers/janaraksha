@@ -13,7 +13,6 @@ import TermsAndConditions from './Pages/TermsAndConditions';
 
 import Comming from './pages/Comming';
 
-import './assets/styles/ui_style.scss';
 import { LocationFilters } from './components/LocationFilters/LocationFilters';
 import { Toaster } from 'react-hot-toast';
 import PrivacyPolicy from './Pages/PrivacyPolicy';
@@ -24,7 +23,7 @@ import BooldBanks from './pages/Donations/Blood/components/RightContainer/BooldB
 
 function App() {
     return (
-        <>
+        <div className='wrapper'>
             <Toaster />
             <Routes>
                 <Route path='/' element={<Home />} />
@@ -46,7 +45,7 @@ function App() {
                 <Route path='/privacyPolicy' element={<PrivacyPolicy />} />
                 <Route path='/showcase/location-filter' Component={LocationFilters} />
             </Routes>
-        </>
+        </div>
     );
 }
 
