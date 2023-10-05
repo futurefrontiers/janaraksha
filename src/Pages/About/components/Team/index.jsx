@@ -2,7 +2,7 @@ import { TESTIMONIAL_INFO } from '../../../../constants/testimonials';
 
 const Team = () => {
     return (
-        <section id='team' className='team'>
+        <section id='team' className='team' z>
             <div className='container' data-aos='fade-up'>
                 <div className='section-header'>
                     <h2>Our Team</h2>
