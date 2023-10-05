@@ -7,8 +7,6 @@ import 'bootstrap/dist/js/bootstrap.bundle.js';
 import 'aos/dist/aos.js';
 import 'glightbox/dist/js/glightbox';
 
-import './ui_fun';
-
 import App from './App.jsx';
 
 import 'bootstrap/dist/css/bootstrap.min.css';

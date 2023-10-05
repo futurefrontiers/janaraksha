@@ -2724,14 +2724,26 @@ section {
     text-decoration: none;
 }
 
-.mobile-footer {
-    background-color: red;
-    position: sticky;
-    bottom: 0;
+.mobile_footer {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 50px;
-    color: #ffff;
+    justify-content: center;
+}
+
+.mobile_footer .social-links a {
+    font-size: 28px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    line-height: 1;
+    margin-right: 18px;
+    border-radius: 4px;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+
+.mobile_footer .social-links a:hover {
+    background: var(--color-primary);
+    text-decoration: none;
 }
